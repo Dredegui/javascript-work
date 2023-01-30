@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>FizzBuzz</title>
+	</head>
+	<body>
+		<script>
+			let n = parseInt(
+				prompt("Please enter the number you would lie to FizzBuzz up to: ")
+			);
+
+			function isFizz(num) {
+				if (num % 3 == 0) {
+					return "Fizz";
+				}
+				return num;
+			}
+
+			function isBuzz(num) {
+				if (num % 5 == 0) {
+					return "Buzz";
+				}
+				return num;
+			}
+
+			function awnser(num) {
+				let res = "";
+				let temp = "";
+				if ((res = isFizz(num)) == num) {
+					res = "";
+				}
+				if ((temp = isBuzz(num)) != num) {
+					res += temp;
+				}
+				if (res.length > 1) {
+					return res;
+				}
+				return num;
+			}
+
+			for (let i = 1; i <= n; i++) {
+				console.log(awnser(i));
+			}
+		</script>
+	</body>
+</html>
